@@ -1,11 +1,11 @@
 package a15cecal_uppgift2;
 
-public class Cards {
+public class Card {
 	private String cardType;
 	private int cardNumber; 
 	
 	//constructor
-	public Cards(String type, int number)
+	public Card(String type, int number)
 	{
 		cardType = type;
 		cardNumber = number;
