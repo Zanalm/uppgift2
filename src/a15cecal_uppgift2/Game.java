@@ -29,11 +29,11 @@ public class Game {
 		}
 	}
 	
-	private int getComputerVictory() {
+	private int getComputerVictories() {
 		return computerVictory;
 	}
 	
-	private int getHumanVictory() {
+	private int getHumanVictories() {
 		return humanVictory;
 	}
 
@@ -44,19 +44,19 @@ public class Game {
 		String quit = " ";
 		System.out.println("Welcome to an awesome game of cards!");
 		
-		// What will happen if the user descides to quit
+		// What will happen if the user decides to quit
 		while(!quit.equals("imma fold")) {
-			System.out.println("");
 			System.out.println("------Cards drawn:------");
 			deck1.shuffleDeck();
 			deck1.drawCards();
 			deck1.printScores();
 			score = deck1.wonRound(); //store information to use in method whoWins()
 			addVictory();
-			whoWins();
-			System.out.println("Victories, human: " + getHumanVictory() + ", computer: " + getComputerVictory());
 			System.out.println("");
-			System.out.println("Hit Enter to play again or write \"imma fold\" to quit");
+			whoWins();
+			System.out.println("Victories, human: " + getHumanVictories() + ", computer: " + getComputerVictories());
+			System.out.println("");
+			System.out.println("------Hit Enter to play again or write \"imma fold\" to quit------");
 			quit = scan.nextLine();
 		}
 		System.out.println("I'd pull out too...");
